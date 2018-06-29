@@ -1,0 +1,63 @@
+Xft.dpi:                        109
+URxvt*termName:                 rxvt-256color
+URxvt*font:                     xft:Menlo\ for\ Powerline:pixelsize=12,xft:Font\ Awesome:pixelsize=12,xft:Inconsolata\ for\ Powerline:pixelsize=12
+URxvt.depth:                    32
+URxvt*lineSpace:                1
+URxvt.letterSpace:              -1
+URxvt.iso14755:                 false
+URxvt.iso14755_52:              false
+URxvt*geometry:                 65x17
+URxvt.urlLauncher:              google-chrome-stable
+URxvt.scrollBar:                false
+URxvt*loginShell:               true
+URxvt.internalBorder:           10
+URxvt.perl-ext-common:          default,matcher,url-select,resize-font
+URxvt.cursorBlink: 		1
+
+! Matcher
+URxvt.url-launcher: 		/usr/bin/xdg-open
+URxvt.matcher.button: 		1
+URxvt.keysym.C-Delete: 		perl:matcher:last
+URxvt.keysym.M-Delete: 		perl:matcher:list
+
+! Yankable Link
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
+
+! Colors
+URxvt.background:   [80]#1a1917
+*foreground:   #eff0eb
+*cursorColor:  #9aedfe
+
+*color0:      #33303b
+*color8:      #4f4b58
+*color1:      #ff5c57
+*color9:      #ff5c57
+*color2:      #5af78e
+*color10:     #5af78e
+*color3:      #f3f99d
+*color11:     #f3f99d
+*color4:      #57c7ff
+*color12:     #57c7ff
+*color5:      #ff6ac1
+*color13:     #ff6ac1
+*color6:      #9aedfe
+*color14:     #9aedfe
+*color7:      #eff0eb
+*color15:     #eff0eb
+
+rofi.color-enabled:     true
+rofi.color-window:      #393b3d, #fff, #777
+rofi.color-normal:      #393b3d, #777, #393b3d, #eee, #000
+rofi.color-active:      #002b37, #008ed4, #003643, #008ed4, #66c6ff
+rofi.color-urgent:      #002b37, #da4281, #003643, #008ed4, #890661
+
+rofi.fullscreen:        true
+rofi.fake-transparency: true
+rofi.lines:             3
+rofi.bw:                0
+rofi.opacity:           "80"
+rofi.hide-scrollbar:    true
+rofi.width:             100
+rofi.padding:           300

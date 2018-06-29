@@ -1,0 +1,34 @@
+alias c="code"
+alias cr="cd /home/puas/Playground/WebApp/cr3-docker-workspace/web/cr3-live"
+alias mnscu="cd /home/puas/Playground/WebApp/cr3-docker-workspace/web/cr3-mnscu"
+alias work="cd /home/puas/Playground/WebApp/cr3-docker-workspace"
+alias docker-clean-unused='docker system prune --all --force --volumes'
+impdb() {
+    echo "Importing file $1.sql.gz to database $2"
+    pv ~/db/$1.sql.gz | zcat | mysql -h 127.0.0.1 -u root -ppassword $2
+    if [[ $1 == *"organization"* ]]
+    then
+        echo "Importing New CR function, trigger, store procedure, and views"
+        pv ~/db/new_cr3_ftsp.sql | mysql -h 127.0.0.1 -u root -ppassword $2
+    elif [[ $1 == *"mnscu"* || $1 == "cr3_pws" ]]
+    then
+        echo "Importing MnST function, trigger, store procedure, and views"
+        pv ~/db/mnscu_ftsp.sql | mysql -h 127.0.0.1 -u root -ppassword $2
+    else
+        echo "Importing CR3 function, trigger, store procedure, and views"
+        pv ~/db/cr3_ftsp.sql | mysql -h 127.0.0.1 -u root -ppassword $2
+    fi
+}
+dldb () {
+    echo "Downloading database from server"
+    scp -P 65534 puas@dwcgwdo1.dwebsite.com:$1.sql.gz ~/db/
+    impdb $1 $2
+}
+asd () {
+  \cp /home/puas/Playground/WebApp/cr3-docker-workspace/web/cr3-live/$1 ~/Playground/temp/a.php
+  \cp /home/puas/Playground/WebApp/cr3-docker-workspace/web/cr3-mnscu/$1 ~/Playground/temp/b.php
+  if [[ $2 == "fix" ]]
+  then
+    php-cs-fixer fix ~/Playground/temp
+  fi
+}

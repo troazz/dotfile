@@ -1,0 +1,85 @@
+! --- colorscheme ---
+*foreground: #d8caac
+*background: #323d43
+*cursorColor:  #d8caac
+*color0: #323d43
+*color8: #6b828f
+*color1: #e68183
+*color9: #e68183
+*color2: #a7c080
+*color10: #a7c080
+*color3: #d9bb80
+*color11: #d9bb80
+*color4: #89beba
+*color12: #89beba
+*color5: #d3a0bc
+*color13: #d3a0bc
+*color6: #87c095
+*color14: #87c095
+*color7: #d8caac
+*color15: #d8caac
+
+! --- config ---
+URxvt.font: xft:SF Mono Powerline:size=10,xft:Inconsolata Nerd Font Mono:size=10,xft:NovaMono for Powerline: size:10,xft:PowelineSymbols: size=10
+URxvt*iconFile:  		/usr/share/icons/Sardi-Mono/scalable/apps/terminal.svg
+URxvt*saveline:         15000
+URxvt*termName:         xterm-256color
+URxvt*urgentOnBell:     false
+URxvt*visualBell:       false
+URxvt*iso14755:         false
+URxvt*iso14755_52:      false
+URxvt*meta8:            false
+URxvt*metaSendsEscape:  true
+URxvt*depth:             32
+!URxvt*transparent:      true
+URxvt*shading:          30
+
+URxvt*scrollTtyOutput:   false
+URxvt*scrollWithBuffer:  true
+URxvt*scrollTtyKeypress: true
+URxvt.scrollBar: false
+URxvt.internalBorder: 10
+URxvt.iso14755: false
+URxvt.letterSpace: -1
+
+! perl extensions
+URxvt*perl-ext-common:  default,clipboard,url-select,keyboard-select,resize-font
+!URxvt*perl-ext-common:  default,clipboard,url-select,keyboard-select,tabbed
+
+! macros for clipboard and selection
+URxvt*copyCommand:      xclip -i -selection clipboard
+URxvt*pasteCommand:     xclip -o -selection clipboard
+URxvt*keysym.M-c:       perl:clipboard:copy
+URxvt*keysym.m-v:       perl:clipboard:paste
+URxvt*keysym.M-C-v:     perl:clipboard:paste_escaped
+URxvt*keysym.M-Escape:  perl:keyboard-select:activate
+URxvt*keysym.M-s:       perl:keyboard-select:search
+URxvt*keysym.M-u:       perl:url-select:select_next
+URxvt*resize-font.smaller:	C-Down
+URxvt*resize-font.bigger:	C-Up
+URxvt*urlLauncher:     brave
+URxvt*underlineURLs:    true
+URxvt*urlButton:        1
+URxvt*geometry: 		90x30
+
+! tabbed
+URxvt*tabbed.tabbar-fg: 4
+URxvt*tabbed.tabbar-bg: 16
+URxvt*tabbed.tab-fg:    15
+URxvt*tabbed.tab-bg:    4
+URxvt*buffered:         false
+URxvt*keysym.Control-Shift-C: perl:clipboard:copy
+URxvt*keysym.Control-Shift-V: perl:clipboard:paste
+
+
+rofi.color-normal: argb:00000000, #b5b286, argb:00000000, #3c3836, #d8caac
+rofi.color-window: #252F35, #000000, #832757
+rofi.color-enabled:     true
+rofi.color-active:      #002b37, #008ed4, #003643, #008ed4, #66c6ff
+rofi.color-urgent:      #002b37, #da4281, #003643, #008ed4, #890661
+
+rofi.fake-transparency: true
+rofi.lines:             3
+rofi.bw:                0
+rofi.opacity:           80
+rofi.hide-scrollbar:    true

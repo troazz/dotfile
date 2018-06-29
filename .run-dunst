@@ -1,0 +1,24 @@
+#!/bin/bash
+
+dunst \
+-lh 3 \
+-lb "#2a2426" \
+-nb "#2a2426" \
+-cb "#2a2426" \
+-lf "#e6d6ac" \
+-bf "#e6d6ac" \
+-cf "#e6d6ac" \
+-nf "#e6d6ac" \
+-fn "Roboto 10" \
+-frame_width 1 \
+-nfr "#e6d6ac" \
+-s -geometry "300x30-20+42" \
+-format "<b>%s</b>\n%b" \
+-separator_height 2 \
+-key "ctrl+space" \
+-all_key "space" \
+-padding 22 \
+-horizontal_padding 22 \
+-nto 8 \
+-indicate_hidden \
+-word_wrap

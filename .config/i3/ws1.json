@@ -1,0 +1,59 @@
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "name": "zsh",
+    "percent": 0.7,
+    "swallows": [
+       {
+         "class": "^URxvt$",
+         "instance": "^urxvt$",
+         "title": "^cr3$",
+         "transient_for": "^$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.3,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "name": "zsh",
+            "percent": 0.6,
+            "swallows": [
+               {
+                 "class": "^URxvt$",
+                 "instance": "^urxvt$",
+                 "title": "^vtop$",
+                 "transient_for": "^$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "name": "zsh",
+            "percent": 0.4,
+            "swallows": [
+               {
+                 "class": "^URxvt$",
+                 "instance": "^urxvt$",
+                 "title": "^sc$",
+                 "transient_for": "^$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
